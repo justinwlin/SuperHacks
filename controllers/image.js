@@ -26,7 +26,6 @@ app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-n
     console.error(err);
   }
 );
-const tester="haha";
 
 module.exports = {
   handleApiCall
