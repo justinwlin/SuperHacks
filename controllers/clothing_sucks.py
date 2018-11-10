@@ -12,8 +12,8 @@ image=CLImage(url=holy_moly)
 small_toes=model1.predict([image])
 big_toes=model.predict([image])
 jagi=small_toes['outputs'][0]['data']['colors'][0]['w3c']["name"]
-shibbal=big_toes['outputs'][0]['data']['concepts'][0]["name"]
-print(jagi,shibbal)
+saranghae=big_toes['outputs'][0]['data']['concepts'][0]["name"]
+print(jagi,saranghae)
 
 # for i in big_toes['outputs'][0]['data']['concepts']:
 #     print(i["name"])
