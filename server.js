@@ -8,14 +8,5 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/', (req, res)=>{res.send('it is working');})
-
-app.post('/test', (req, res)=>{
-  console.log(req.body);
-  const user = {
-    user: "test"
-  }
-  res.send(user);
-})
-
-app.post('/test2', (req, res)=>{image.handleApiCall(req, res)})
+app.post('/traffic', (req, res)=>{image.traffic(req, res)})
 app.listen(3000);
