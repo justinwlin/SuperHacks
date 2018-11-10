@@ -4,7 +4,11 @@ const Clarifai = require('clarifai');
 const app = new Clarifai.App({
  apiKey: '150500f8fb424f57a89dbb731b79ae2a'
 });
-
+/*
+{
+    "input": "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/b/bb/Tony_Stark_Promo.jpg/revision/latest?cb=20141129202546"
+}
+*/
 const handleApiCall = (req, res) => {
   app.models
     .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
