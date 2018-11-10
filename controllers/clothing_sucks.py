@@ -11,8 +11,9 @@ holy_moly="https://images.calzedonia.com/get/w/2000/CGU12A_wear_019_F.jpg"
 image=CLImage(url=holy_moly)
 small_toes=model1.predict([image])
 big_toes=model.predict([image])
-
-print(small_toes['outputs'][0]['data']['colors'][0]['w3c']["name"],big_toes['outputs'][0]['data']['concepts'][0]["name"])
+jagi=small_toes['outputs'][0]['data']['colors'][0]['w3c']["name"]
+shibbal=big_toes['outputs'][0]['data']['concepts'][0]["name"]
+print(jagi,shibbal)
 
 # for i in big_toes['outputs'][0]['data']['concepts']:
 #     print(i["name"])
