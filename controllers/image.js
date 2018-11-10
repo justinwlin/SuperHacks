@@ -11,7 +11,7 @@ const app = new Clarifai.App({
 */
 const handleApiCall = (req, res) => {
   app.models
-    .predict(Clarifai.COLOR_MODEL, req.body.input)
+    .predict(Clarifai.APPAREL_MODEL, req.body.input)
     .then(data => {
       res.json(data);
     })
