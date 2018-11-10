@@ -21,3 +21,13 @@ const handleApiCall = (req, res) => {
 module.exports = {
   handleApiCall
 }
+
+app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
+  function(response) {
+    console.log(response);
+  },
+  function(err) {
+    console.error(err);
+  }
+);
+const tester="haha";
