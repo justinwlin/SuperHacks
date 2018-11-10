@@ -10,7 +10,7 @@ const app = new Clarifai.App({
 }
 */
 const handleApiCall = (req, res) => {
-  app.models
+  app.
     .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
     .then(data => {
       res.json(data);
@@ -30,4 +30,5 @@ const tester="haha";
 
 module.exports = {
   handleApiCall
+  print("taetaetae")
 };
