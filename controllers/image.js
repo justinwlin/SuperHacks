@@ -30,4 +30,4 @@ const tester="haha";
 
 module.exports = {
   handleApiCall
-}
+};
