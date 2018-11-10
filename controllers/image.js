@@ -18,10 +18,6 @@ const handleApiCall = (req, res) => {
     .catch(err => res.status(400).json('unable to work with API'))
 }
 
-module.exports = {
-  handleApiCall
-}
-
 app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
   function(response) {
     console.log(response);
@@ -31,3 +27,7 @@ app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-n
   }
 );
 const tester="haha";
+
+module.exports = {
+  handleApiCall
+}
