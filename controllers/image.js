@@ -11,16 +11,16 @@ const app = new Clarifai.App({
 */
 const handleApiCall = (req, res) => {
   app.models
-    .predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
+    .predict(Clarifai.COLOR_MODEL, req.body.input)
     .then(data => {
       res.json(data);
     })
     .catch(err => res.status(400).json('unable to work with API'))
-}
+};
 
 module.exports = {
   handleApiCall
-}
+};
 
 app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-north.jpg').then(
   function(response) {
@@ -30,5 +30,3 @@ app.models.predict(Clarifai.GENERAL_MODEL, 'https://samples.clarifai.com/metro-n
     console.error(err);
   }
 );
-const tester="haha";
-print("lmao");
