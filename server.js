@@ -1,9 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt-nodejs');
 const app = express();
 const cors = require('cors');
-const register = require('./controllers/image')
+const image = require('./controllers/image')
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -17,4 +16,6 @@ app.post('/test', (req, res)=>{
   }
   res.send(user);
 })
+
+app.post('/test2', (req, res)=>{image.handleApiCall(req, res)})
 app.listen(3000);
