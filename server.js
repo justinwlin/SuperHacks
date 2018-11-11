@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
-const image = require('./controllers/image')
+const image = require('./controllers/traffic')
 
 app.use(bodyParser.json());
 app.use(cors());
